@@ -1,142 +1,270 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>プライバシーポリシー | ワンタッチメール</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ワンタッチメール プライバシーポリシー</title>
+<meta name="description" content="iPhoneアプリ「ワンタッチメール」のプライバシーポリシーです。">
+<link rel="canonical" href="https://keipoi128-lgtm.github.io/one_touch_mail_privacy_policy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: -apple-system, "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif; line-height: 1.8; color: #222; max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; background: #fafafa; }
-  h1 { font-size: 24px; border-bottom: 2px solid #2a7de1; padding-bottom: 12px; margin-bottom: 8px; }
-  .updated { color: #777; font-size: 13px; margin-bottom: 32px; }
-  h2 { font-size: 18px; margin-top: 36px; border-left: 4px solid #2a7de1; padding-left: 10px; }
-  p, li { font-size: 15px; }
-  ol, ul { padding-left: 22px; }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #f0f4fa; }
-  .caution { background: #fff3f3; border: 1px solid #e8b4b4; border-radius: 8px; padding: 12px 16px; margin: 16px 0; font-size: 14px; }
-  footer { margin-top: 48px; font-size: 13px; color: #999; border-top: 1px solid #ddd; padding-top: 16px; }
+:root{
+  --paper:#FBFCFE; --ink:#172033; --sub:#4A5568; --blue:#0A63E0; --deep:#0846C0;
+  --mist:#E6ECF5; --panel:#F1F5FB; --note-bg:#FFF6E5; --note-ink:#7A4700; --note-line:#E8B45C;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1522; --ink:#E8EDF6; --sub:#AAB5C8; --blue:#5B9BFF; --deep:#8DB8FF;
+    --mist:#26324A; --panel:#172136; --note-bg:#2A2110; --note-ink:#F3CF8C; --note-line:#8A6420;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  font-size:18px; line-height:1.9; letter-spacing:.02em;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.wrap{max-width:40rem; margin:0 auto; padding:0 1.25rem}
+header.site{border-bottom:1px solid var(--mist); padding:2.25rem 0 1.75rem}
+.app{margin:0; font-size:1rem; color:var(--sub); font-weight:700}
+h1{margin:.35rem 0 0; font-size:2rem; line-height:1.4; letter-spacing:.04em;
+   border-left:6px solid var(--blue); padding-left:.8rem}
+.lead{margin:1rem 0 0; color:var(--sub)}
+main{padding:1.5rem 0 3rem}
+h2{font-size:1.35rem; line-height:1.5; margin:2.75rem 0 .75rem; padding-top:.5rem; border-top:1px solid var(--mist)}
+main>section:first-child h2{border-top:0; margin-top:1rem}
+h3{font-size:1.1rem; margin:1.75rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--blue); text-underline-offset:.2em}
+a:hover{color:var(--deep)}
+:focus-visible{outline:3px solid var(--blue); outline-offset:3px; border-radius:4px}
+ol,ul{padding-left:1.6em; margin:.5rem 0}
+li{margin:.35rem 0}
+.toc{background:var(--panel); border-radius:12px; padding:1rem 1.25rem; margin:1.25rem 0 0}
+.toc p{margin:0 0 .25rem; font-weight:700}
+.toc ol{list-style:none; padding:0; margin:0}
+@media (min-width:640px){.toc ol{columns:2; column-gap:2rem}}
+.toc li{margin:.15rem 0; break-inside:avoid}
+.note{background:var(--note-bg); color:var(--note-ink); border-left:5px solid var(--note-line);
+      border-radius:8px; padding:.9rem 1.1rem; margin:1rem 0}
+.note strong{display:block; margin-bottom:.15rem}
+.muted{color:var(--sub); font-size:.95rem}
+.mail{font-weight:700; font-size:1.15rem; word-break:break-all}
+footer.site{border-top:1px solid var(--mist); padding:1.5rem 0 2.5rem; color:var(--sub); font-size:.95rem}
+footer.site nav{margin-bottom:.75rem}
+footer.site nav a{display:inline-block; margin:0 1.5rem .5rem 0}
+
+ol.kou{padding-left:1.6em}
+ol.kou>li{padding-left:.2em}
+@counter-style paren{system:extends decimal; prefix:"("; suffix:") "}
+ol.go{list-style:paren; padding-left:2.4em}
+section[id^="a"] h2{font-size:1.2rem; margin-top:2.25rem}
+
+.table-wrap{overflow-x:auto; margin:1rem 0}
+table{border-collapse:collapse; width:100%; font-size:.95rem; line-height:1.7}
+th,td{border:1px solid var(--mist); padding:.6rem .7rem; text-align:left; vertical-align:top}
+thead th{background:var(--panel); font-weight:700}
+@media (max-width:600px){
+  table,tbody,tr,td{display:block; width:100%}
+  thead{display:none}
+  tr{border:1px solid var(--mist); border-radius:10px; margin:0 0 .75rem; overflow:hidden}
+  td{border:0; border-top:1px solid var(--mist); padding:.5rem .8rem}
+  td:first-child{border-top:0; background:var(--panel); font-weight:700}
+  td::before{content:attr(data-label); display:block; font-size:.8rem; font-weight:700; color:var(--sub)}
+}
 </style>
 </head>
 <body>
+<header class="site">
+  <div class="wrap">
+    <p class="app">ワンタッチメール</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="lead">合同会社Goat（以下「当社」といいます）は、iPhone向けアプリ「ワンタッチメール」（以下「本アプリ」といいます）における利用者の情報の取扱いについて、次のとおりプライバシーポリシー（以下「本ポリシー」といいます）を定めます。</p>
+    <nav class="toc" aria-label="目次">
+      <p>目次</p>
+      <ol>
+        <li><a href="#p1">1　基本的な考え方</a></li>
+        <li><a href="#p2">2　端末内に保存される情報</a></li>
+        <li><a href="#p3">3　位置情報</a></li>
+        <li><a href="#p4">4　メール送信に伴うGoogleへの送信</a></li>
+        <li><a href="#p5">5　広告の配信</a></li>
+        <li><a href="#p6">6　外部に送信される情報の一覧</a></li>
+        <li><a href="#p7">7　当社が取得する情報</a></li>
+        <li><a href="#p8">8　第三者への提供</a></li>
+        <li><a href="#p9">9　安全管理と保存期間</a></li>
+        <li><a href="#p10">10　開示等のご請求</a></li>
+        <li><a href="#p11">11　未成年の方の利用</a></li>
+        <li><a href="#p12">12　本ポリシーの変更</a></li>
+        <li><a href="#p13">13　事業者情報・お問い合わせ</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
 
-<h1>プライバシーポリシー</h1>
-<p class="updated">制定日:2026年9月6日<br>改定日:2026年9月9日</p>
+<main class="wrap">
 
-<p>
-合同会社Goat(以下「当社」といいます)は、当社が提供するiOSアプリケーション「ワンタッチメール」(以下「本アプリ」といいます)における利用者情報の取り扱いについて、以下のとおりプライバシーポリシー(以下「本ポリシー」といいます)を定めます。利用者は、本アプリをインストールまたは利用することにより、本ポリシーの内容に同意したものとみなされます。
-</p>
+  <section id="p1">
+    <h2>1　基本的な考え方</h2>
+    <p>本アプリは、利用者のiPhoneから、利用者自身のGmailアカウントを使ってメールを送信するアプリです。当社は本アプリのためのサーバーを運営しておらず、利用者が本アプリに登録した情報や、送信したメールの宛先・内容を取得しません。</p>
+    <p>当社が直接取得する情報は、お問い合わせの際にご提供いただく情報に限られます（第7項）。また、本アプリには、利用状況の解析やクラッシュ報告のためのツールは組み込んでいません。</p>
+  </section>
 
-<h2>第1条(基本方針)</h2>
-<ol>
-<li>本アプリは、利用者があらかじめ登録した宛先へメールをワンタッチで送信するための道具であり、利用者自身のGmailアカウントを通じてメールを送信します。</li>
-<li>当社は、本アプリを通じて入力・生成・送信される情報(メールアドレス、アプリパスワード、宛先、件名、本文、位置情報を含みますが、これらに限りません)を、当社のサーバーその他当社が管理する設備において収集、保存、閲覧または処理することは一切ありません。</li>
-<li>本アプリが扱う情報は、すべて利用者の端末内にのみ保存され、外部へ送信される場合であっても当社を経由せず、利用者の端末からGoogle LLC(以下「Google」といいます)の提供するメール送信サーバーへ直接送信されます。</li>
-<li>本アプリは無料で提供され、画面内にGoogleが提供する広告配信サービス「Google AdMob」による広告を表示します。広告の配信に際してGoogleが取得する情報については、第4条に定めます。当社自身がこれらの情報を取得することはありません。</li>
-</ol>
+  <section id="p2">
+    <h2>2　端末内に保存される情報</h2>
+    <p>次の情報は、本アプリの機能を提供するために利用者のiPhoneの中に保存されます。当社のサーバーに送信されることはなく、当社はこれらを取得しません。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">情報</th><th scope="col">使い道</th><th scope="col">保存場所</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="情報">Gmailアドレス、送信者表示名</td><td data-label="使い道">メールの送信元として使用します</td><td data-label="保存場所">iOSのキーチェーン</td></tr>
+          <tr><td data-label="情報">アプリパスワード</td><td data-label="使い道">Gmailの送信サーバーへのログインに使用します。保存後は画面に表示しません</td><td data-label="保存場所">iOSのキーチェーン</td></tr>
+          <tr><td data-label="情報">送信ボタンの内容（表示名、アイコン、宛先、件名、本文、動作の種類、並び順）</td><td data-label="使い道">ワンタッチでの送信に使用します</td><td data-label="保存場所">本アプリの保存領域</td></tr>
+          <tr><td data-label="情報">送信した日時の記録</td><td data-label="使い道">送信数の上限（1分間に5通、1日に100通）の管理に使用します。宛先や内容は記録せず、前日以前の記録は順次削除します</td><td data-label="保存場所">本アプリの保存領域</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>本アプリを削除すると、本アプリの保存領域にある情報は削除されます。iOSの仕様によりキーチェーンの情報は端末に残りますが、本アプリを再びインストールして初めて起動した時点で削除されます。なお、これらの情報は、iCloudやパソコンへのiPhoneのバックアップに含まれる場合があります。</p>
+    <p>ワンタッチタブで入力中の本文（下書き）は、本アプリを起動している間だけ一時的に保持し、保存しません。</p>
+  </section>
 
-<h2>第2条(本アプリが端末内で取り扱う情報)</h2>
-<p>本アプリは、以下の情報を利用者の端末内でのみ取り扱います。いずれも当社が取得するものではありません。</p>
-<table>
-<tr><th>情報の種類</th><th>保存場所</th><th>利用目的</th></tr>
-<tr>
-  <td>Gmailアドレス、アプリパスワード、送信者表示名</td>
-  <td>端末内のセキュアストレージ(iOS Keychain)</td>
-  <td>Googleのメール送信サーバーへの認証およびメール送信のため</td>
-</tr>
-<tr>
-  <td>プリセットボタンの設定内容(宛先メールアドレス、件名、本文のひな形)</td>
-  <td>端末内のアプリ設定領域</td>
-  <td>利用者が登録した内容によるワンタッチ送信のため</td>
-</tr>
-<tr>
-  <td>位置情報(緯度・経度および取得精度)</td>
-  <td>保存されません(送信の都度取得し、送信後に破棄)</td>
-  <td>「現在地を共有」機能において、Googleマップのリンク形式でメール本文に組み込むため</td>
-</tr>
-<tr>
-  <td>送信日時の記録</td>
-  <td>端末内のアプリ設定領域</td>
-  <td>短時間の連続送信および1日あたりの送信数を制御し、利用者のGoogleアカウントが制限を受けることを予防するため(宛先・件名・本文等の内容は記録しません)</td>
-</tr>
-<tr>
-  <td>広告配信に関する情報(端末情報、IPアドレス、広告の表示・操作に関する情報等)</td>
-  <td>Googleのサーバー(当社は保有しません)</td>
-  <td>Google AdMobによる広告の表示および不正防止のため。詳細は第4条をご覧ください</td>
-</tr>
-</table>
+  <section id="p3">
+    <h2>3　位置情報</h2>
+    <ol class="kou">
+      <li>本アプリは、利用者が「現在地を共有」のボタンをタップし、確認画面で「送信」を選んだときに限り、iPhoneの位置情報を取得します。本アプリを使っていないとき（バックグラウンド）に位置情報を取得することはありません。</li>
+      <li>取得した位置情報（緯度・経度とGoogleマップのリンク）は、メールの本文に記載して、利用者が指定した宛先へ送信するためだけに使用します。</li>
+      <li>位置情報は、端末内に保存せず、当社に送信することもありません。</li>
+      <li>位置情報の利用の許可は、iPhoneの「設定」アプリでいつでも変更できます。</li>
+    </ol>
+  </section>
 
-<h2>第3条(位置情報の取り扱い)</h2>
-<ol>
-<li>本アプリの「現在地を共有」機能は、利用者が当該機能のボタンを操作した時点の位置情報のみを取得し、利用者が指定した宛先へメール本文の一部として送信するものです。位置情報を継続的に取得、蓄積、追跡または当社へ送信する機能ではありません。</li>
-<li>位置情報の取得には、iOSの位置情報サービスに対する利用者の許可が必要です。利用者は、端末の設定からいつでも許可を取り消すことができます。</li>
-<li>位置情報を含むメールの送信にあたっては、送信前に宛先メールアドレスを明示した確認画面が表示されます。送信の可否は、利用者自身がその責任において判断するものとします。</li>
-<li>取得された位置情報の精度は、端末の状態、周辺環境(屋内、地下、高層建築物付近等)、通信状況その他の要因によって変動します。本アプリは、位置情報の精度が一定の基準を下回る場合に本文中へその旨を付記しますが、当社は位置情報の正確性、完全性または適時性について何ら保証しません。</li>
-<li>利用者は、第三者の同意を得ることなく当該第三者の位置情報を送信し、または位置情報を第三者の監視・追跡その他不正な目的に用いてはなりません。</li>
-</ol>
+  <section id="p4">
+    <h2>4　メール送信に伴うGoogleへの送信</h2>
+    <ol class="kou">
+      <li>メールを送信する際、Gmailアドレス、アプリパスワード（ログインのため）、送信者表示名、宛先、件名および本文が、利用者のiPhoneから直接、Googleの送信サーバーへ暗号化された通信で送信されます。</li>
+      <li>これらの情報は、Google LLC（以下「Google」といいます）のプライバシーポリシーに従って取り扱われます。送信したメールは、Googleの仕様により利用者のGmailの「送信済み」に保存されます。</li>
+    </ol>
+    <p><a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a></p>
+  </section>
 
-<h2>第4条(第三者への提供および外部サービス)</h2>
-<ol>
-<li>当社は、本アプリに関して利用者の情報を取得しないため、第三者へ提供することもありません。</li>
-<li>本アプリには、広告表示のためにGoogleが提供する「Google AdMob」のソフトウェア開発キット(SDK)が組み込まれています。広告の配信に際し、Googleは端末の種類やOSのバージョン等の端末情報、IPアドレス、広告の表示回数やタップ等の操作に関する情報、およびAppleのSKAdNetworkの仕組みを通じた広告効果の計測に必要な情報を取得することがあります。これらの情報はGoogleが取得・管理するものであり、当社はこれらを受け取りません。Googleによる情報の取り扱いについては、Googleのプライバシーポリシー(<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)および広告に関するポリシー(<a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>)をご確認ください。</li>
-<li>本アプリは、Appleの「Appのトラッキングの透明性」(App Tracking Transparency)による許可を求めず、広告識別子(IDFA)を用いた利用者の追跡やパーソナライズ広告のための情報連携を行いません。</li>
-<li>本アプリには、上記のGoogle AdMob以外に、アクセス解析や行動追跡等を目的とする外部のSDKやサービスは組み込まれていません。</li>
-<li>本アプリからのメール送信は、Googleが提供するメール送信サーバーを通じて行われます。Googleによる情報の取り扱いについては、Googleが定めるプライバシーポリシーおよび利用規約が適用され、当社はこれらについて責任を負いません。</li>
-<li>本アプリはApple Inc.(以下「Apple」といいます)のApp Storeを通じて無料で配布されます。App Storeでのダウンロードに関する情報はAppleが取り扱い、当社は当該情報を取得しません。</li>
-</ol>
+  <section id="p5">
+    <h2>5　広告の配信</h2>
+    <ol class="kou">
+      <li>本アプリは無料で提供するため、Googleの広告配信サービス「Google AdMob」を利用しています。</li>
+      <li>Google AdMobにより、Googleが、広告の配信、広告効果の測定および不正な広告操作の防止のために、端末や本アプリの利用に関する情報（第6項の一覧のとおり）を取得する場合があります。これらの情報はGoogleが直接取得するものであり、当社が利用者個人を特定できる形で受け取ることはありません。</li>
+      <li>本アプリは、他社のアプリやウェブサイトをまたいだ追跡（トラッキング）の許可を求めていません。そのため、iOSの仕様により、広告識別子（IDFA）が広告の配信に利用されることはありません。</li>
+      <li>Googleによる情報の取扱いについては、次のページをご覧ください。広告の表示に関する設定は、Googleの広告設定のページで変更できます。</li>
+    </ol>
+    <ul>
+      <li><a href="https://policies.google.com/technologies/partner-sites?hl=ja">Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用</a></li>
+      <li><a href="https://adssettings.google.com/">Googleの広告設定</a></li>
+    </ul>
+  </section>
 
-<h2>第5条(データの保持および削除)</h2>
-<ol>
-<li>本アプリが端末内に保存する情報は、利用者が本アプリをアンインストールすることにより、原則として端末から削除されます。</li>
-<li>ただし、iOSの仕様上、Keychainに保存された情報(Gmailアドレス、アプリパスワード、送信者表示名)は、本アプリをアンインストールした後も端末内に残存する場合があります。本アプリは、当該端末で本アプリが初めて起動された際にKeychain内の当該情報を自動的に削除する仕組みを備えていますが、当社は当該仕組みが全ての状況において確実に機能することを保証するものではありません。</li>
-<li>利用者は、端末を第三者に譲渡、売却または廃棄する前に、本アプリのメール設定を削除し、Googleアカウントの設定から本アプリ用に発行したアプリパスワードを無効化するものとします。これを怠ったことにより利用者または第三者に生じた損害について、当社は責任を負いません。</li>
-</ol>
+  <section id="p6">
+    <h2>6　外部に送信される情報の一覧</h2>
+    <p>本アプリの利用に伴い、利用者のiPhoneから外部へ送信される情報は、次のとおりです。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">送信先</th><th scope="col">送信される情報</th><th scope="col">目的</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="送信先">Google LLC（Gmail）</td><td data-label="送信される情報">Gmailアドレス、アプリパスワード、送信者表示名、宛先、件名、本文（「現在地を共有」の場合は位置情報を含みます）</td><td data-label="目的">利用者の操作によるメールの送信</td></tr>
+          <tr><td data-label="送信先">Google LLC（Google AdMob）</td><td data-label="送信される情報">IPアドレス（およびそこから推定されるおおよその地域）、端末の情報（機種、OSのバージョン、言語の設定など）、端末の識別子（ベンダー向け識別子など）、広告の表示・タップの状況、本アプリに関する情報</td><td data-label="目的">広告の配信、広告効果の測定、不正な広告操作の防止</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Google AdMobが取得する情報の詳細は、Googleの仕様により変更される場合があります。</p>
+  </section>
 
-<h2>第6条(安全管理措置)</h2>
-<ol>
-<li>本アプリは、Gmailアプリパスワード等の認証情報を、iOSが提供するKeychainを通じて暗号化された状態で保存します。</li>
-<li>当社は、本アプリの設計において合理的な範囲で安全管理措置を講じますが、利用者の端末の紛失、盗難、不正アクセス、マルウェア感染、OSまたは端末の脆弱性、通信経路上の傍受その他当社の管理の及ばない事由に起因する情報の漏えい、滅失または毀損について、責任を負いません。</li>
-<li>利用者は、端末にパスコードや生体認証によるロックを設定するなど、端末および認証情報を自己の責任において適切に管理するものとします。</li>
-</ol>
+  <section id="p7">
+    <h2>7　当社が取得する情報</h2>
+    <ol class="kou">
+      <li>当社は、お問い合わせ、不具合のご報告および不正利用の通報の際に、次の情報を取得します。
+        <ol class="go">
+          <li>メールアドレス</li>
+          <li>お名前（記載された場合）</li>
+          <li>お問い合わせの内容</li>
+          <li>アプリのバージョン、iPhoneの機種、iOSのバージョンなど（記載された場合）</li>
+        </ol>
+      </li>
+      <li>当社は、これらの情報を次の目的で利用します。
+        <ol class="go">
+          <li>お問い合わせへの回答およびご連絡</li>
+          <li>不具合の調査および本アプリの改善</li>
+          <li>不正利用の通報への対応</li>
+        </ol>
+      </li>
+      <li>アプリパスワードは、お問い合わせのメールに絶対に記載しないでください。当社がアプリパスワードをお尋ねすることはありません。</li>
+    </ol>
+  </section>
 
-<h2>第7条(Googleアカウントおよびアプリパスワードに関する注意)</h2>
-<ol>
-<li>本アプリの利用には、Googleアカウントの2段階認証を有効にしたうえで発行されるアプリパスワードが必要です。</li>
-<li>利用者は、本アプリ専用のアプリパスワードを発行し、他のアプリやサービスと共用しないものとします。</li>
-<li>アプリパスワードが第三者に知られた場合、当該第三者は利用者のGoogleアカウントからメールを送信できる状態になります。利用者は、アプリパスワードを他人に開示または共有してはなりません。</li>
-<li>短時間に大量のメールを送信した場合、Googleの判断により利用者のGoogleアカウントの送信機能が制限され、またはアカウント自体が停止されることがあります。本アプリは送信回数を一定の範囲に抑える機能を備えていますが、当社はGoogleによる制限または停止が生じないことを保証せず、これにより利用者に生じた損害について責任を負いません。</li>
-</ol>
+  <section id="p8">
+    <h2>8　第三者への提供</h2>
+    <p>当社は、第7項で取得した個人情報を、次の場合を除き、ご本人の同意なく第三者に提供しません。</p>
+    <ol class="go">
+      <li>法令に基づく場合</li>
+      <li>人の生命、身体または財産の保護のために必要がある場合で、ご本人の同意を得ることが困難であるとき</li>
+      <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合で、ご本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+      <li>その他、個人情報の保護に関する法律により認められる場合</li>
+    </ol>
+  </section>
 
-<h2>第8条(未成年者の利用)</h2>
-<p>
-本アプリは、Googleアカウントの保有および2段階認証の設定を前提としていることから、成年者、または保護者の同意および管理のもとで利用する未成年者による利用を想定しています。未成年者が本アプリを利用する場合、保護者は本ポリシーおよび利用規約の内容に同意したうえで、当該未成年者による利用を監督するものとします。
-</p>
+  <section id="p9">
+    <h2>9　安全管理と保存期間</h2>
+    <ol class="kou">
+      <li>当社は、第7項で取得した個人情報について、閲覧できる者を限定するなど、漏えい、滅失またはき損を防ぐための安全管理措置を講じます。外国のクラウドサービスを利用して保管する場合は、その国の個人情報の保護に関する制度を把握した上で、必要な措置を講じます。</li>
+      <li>第7項で取得した個人情報は、対応の完了後、記録として必要な期間保管し、不要となった時点で削除します。</li>
+      <li>安全管理措置の内容については、ご請求に応じて遅滞なく回答します。</li>
+    </ol>
+  </section>
 
-<h2>第9条(本ポリシーの変更)</h2>
-<ol>
-<li>当社は、法令の改正、本アプリの機能変更その他必要と判断した場合、利用者への事前の通知なく本ポリシーを変更することができます。</li>
-<li>変更後の本ポリシーは、本ページに掲載された時点から効力を生じるものとし、掲載後に利用者が本アプリを利用した場合、変更後の本ポリシーに同意したものとみなします。</li>
-</ol>
+  <section id="p10">
+    <h2>10　開示等のご請求</h2>
+    <p>当社が保有するご本人の個人情報について、開示、訂正、追加、削除、利用の停止、第三者への提供の停止などをご希望の場合は、第13項のお問い合わせ窓口までご連絡ください。ご本人であることを確認した上で、法令に従って遅滞なく対応します。</p>
+    <p>なお、端末内に保存される情報（第2項）は当社が保有していないため、本アプリ内で変更または削除してください。</p>
+  </section>
 
-<h2>第10条(準拠法および管轄裁判所)</h2>
-<p>
-本ポリシーは日本法に準拠し、日本法に従って解釈されます。本ポリシーに関連して利用者と当社との間に生じた紛争については、那覇地方裁判所または那覇簡易裁判所を第一審の専属的合意管轄裁判所とします。
-</p>
+  <section id="p11">
+    <h2>11　未成年の方の利用</h2>
+    <p>未成年の方は、親権者などの法定代理人の同意を得た上で、本アプリを利用してください。</p>
+  </section>
 
-<h2>第11条(お問い合わせ窓口)</h2>
-<p>
-本アプリおよび本ポリシーに関するお問い合わせは、以下の窓口までご連絡ください。<br><br>
-事業者名:合同会社Goat<br>
-メールアドレス:info☆goatokinawa.com
-</p>
-<div class="caution">
-(注意)☆→＠に変換してください。(迷惑メール対策)
-</div>
+  <section id="p12">
+    <h2>12　本ポリシーの変更</h2>
+    <p>当社は、法令の改正や本アプリの機能の変更などに応じて、本ポリシーを変更することがあります。変更後の本ポリシーは、このページに掲載した時点から効力を生じます。ただし、重要な変更を行う場合は、効力が生じる日より前に、本アプリ内またはこのページでお知らせします。</p>
+  </section>
 
-<footer>
-ワンタッチメール(one_touch_mail) プライバシーポリシー<br>
-合同会社Goat
+  <section id="p13">
+    <h2>13　事業者情報・お問い合わせ</h2>
+    <p>合同会社Goat<br><span class="mail">info☆goatokinawa.com</span><br><span class="muted">迷惑メール対策のため、☆を@に置き換えて送信してください。</span></p>
+    <p class="muted">当社の住所および代表者の氏名は、お問い合わせいただいた場合に遅滞なく回答します。</p>
+  </section>
+
+  <section id="supplement">
+    <h2>附則</h2>
+    <p>本ポリシーは、2026年10月3日から施行します。</p>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="関連ページ">
+      <a href="https://keipoi128-lgtm.github.io/one_touch_mail_support/">サポート</a>
+      <a href="https://keipoi128-lgtm.github.io/one_touch_mail_terms_of_service/">利用規約</a>
+      <a href="https://keipoi128-lgtm.github.io/one_touch_mail_privacy_policy/">プライバシーポリシー</a>
+    </nav>
+    <p>提供：合同会社Goat</p>
+  </div>
 </footer>
-
 </body>
 </html>
